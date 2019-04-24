@@ -1,0 +1,26 @@
+{
+  "name": "hps-cucumber-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && cucumber-js features/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiptest/hps-cucumber-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiptest/hps-cucumber-typescript/issues"
+  },
+  "homepage": "https://github.com/hiptest/hps-cucumber-typescript#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/cucumber": "^4.0.5",
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0"
+  }
+}
