@@ -1,3 +1,4 @@
 node_modules
+src/coffee_machine.js
 features/actionwords.js
 features/step_definitions.js

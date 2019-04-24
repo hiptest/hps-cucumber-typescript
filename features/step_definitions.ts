@@ -1,7 +1,9 @@
 import { After, Before, Given, When, Then } from "cucumber";
-import { ActionWords } from 'actionwords';
+import { ActionWords } from './actionwords';
 
+let actionWords : ActionWords;
 Before(async () => {
+    actionWords = new ActionWords();
 });
 
 After(async () => {
@@ -9,75 +11,75 @@ After(async () => {
 
 
 When(/^I start the coffee machine using language "(.*)"$/, async (lang) => {
-    ActionWords.iStartTheCoffeeMachineUsingLanguageLang(lang);
+    actionWords.iStartTheCoffeeMachineUsingLanguageLang(lang);
 });
 
 When(/^I shutdown the coffee machine$/, async () => {
-    ActionWords.iShutdownTheCoffeeMachine();
+    actionWords.iShutdownTheCoffeeMachine();
 });
 
 Then(/^message "(.*)" should be displayed$/, async (message) => {
-    ActionWords.messageMessageShouldBeDisplayed(message);
+    actionWords.messageMessageShouldBeDisplayed(message);
 });
 
 
 Then(/^coffee should not be served$/, async () => {
-    ActionWords.coffeeShouldNotBeServed();
+    actionWords.coffeeShouldNotBeServed();
 });
 
 When(/^I take a coffee$/, async () => {
-    ActionWords.iTakeACoffee();
+    actionWords.iTakeACoffee();
 });
 
 When(/^I empty the coffee grounds$/, async () => {
-    ActionWords.iEmptyTheCoffeeGrounds();
+    actionWords.iEmptyTheCoffeeGrounds();
 });
 
 When(/^I fill the beans tank$/, async () => {
-    ActionWords.iFillTheBeansTank();
+    actionWords.iFillTheBeansTank();
 });
 
 
 When(/^I take "(.*)" coffees$/, async (coffee_number) => {
-    ActionWords.iTakeCoffeeNumberCoffees(coffee_number);
+    actionWords.iTakeCoffeeNumberCoffees(coffee_number);
 });
 
 Given(/^the coffee machine is started$/, async () => {
-    ActionWords.theCoffeeMachineIsStarted();
+    actionWords.theCoffeeMachineIsStarted();
 });
 
 Given(/^I handle everything except the water tank$/, async () => {
-    ActionWords.iHandleEverythingExceptTheWaterTank();
+    actionWords.iHandleEverythingExceptTheWaterTank();
 });
 
 Given(/^I handle water tank$/, async () => {
-    ActionWords.iHandleWaterTank();
+    actionWords.iHandleWaterTank();
 });
 
 Given(/^I handle beans$/, async () => {
-    ActionWords.iHandleBeans();
+    actionWords.iHandleBeans();
 });
 
 Given(/^I handle coffee grounds$/, async () => {
-    ActionWords.iHandleCoffeeGrounds();
+    actionWords.iHandleCoffeeGrounds();
 });
 
 Given(/^I handle everything except the beans$/, async () => {
-    ActionWords.iHandleEverythingExceptTheBeans();
+    actionWords.iHandleEverythingExceptTheBeans();
 });
 
 Given(/^I handle everything except the grounds$/, async () => {
-    ActionWords.iHandleEverythingExceptTheGrounds();
+    actionWords.iHandleEverythingExceptTheGrounds();
 });
 
 Then(/^displayed message is:$/, async (__free_text) => {
-    ActionWords.displayedMessageIs(__free_text);
+    actionWords.displayedMessageIs(__free_text);
 });
 
 When(/^I switch to settings mode$/, async () => {
-    ActionWords.iSwitchToSettingsMode();
+    actionWords.iSwitchToSettingsMode();
 });
 
 Then(/^settings should be:$/, async (__datatable) => {
-    ActionWords.settingsShouldBe(__datatable);
+    actionWords.settingsShouldBe(__datatable);
 });
