@@ -7,12 +7,12 @@ Feature: Grounds
     Given the coffee machine is started
     And I handle everything except the grounds
 
-  @priority-0
+  @priority-high
   Scenario: Message "Empty grounds" is displayed after 30 coffees are taken
     When I take "30" coffees
     Then message "Empty grounds" should be displayed
 
-  @priority-1
+  @priority-medium
   Scenario: When the grounds are emptied, message is removed
     When I take "30" coffees
     And I empty the coffee grounds

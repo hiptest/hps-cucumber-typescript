@@ -1,4 +1,4 @@
-import { After, Before, Given, When, Then } from "cucumber";
+import { After, Before, Given, When, Then, TableDefinition } from "cucumber";
 import { ActionWords } from './actionwords';
 
 let actionWords : ActionWords;
@@ -22,6 +22,9 @@ Then(/^message "(.*)" should be displayed$/, async (message) => {
     actionWords.messageMessageShouldBeDisplayed(message);
 });
 
+Then(/^coffee should be served$/, async () => {
+    actionWords.coffeeShouldBeServed();
+});
 
 Then(/^coffee should not be served$/, async () => {
     actionWords.coffeeShouldNotBeServed();
@@ -39,6 +42,9 @@ When(/^I fill the beans tank$/, async () => {
     actionWords.iFillTheBeansTank();
 });
 
+When(/^I fill the water tank$/, async () => {
+    actionWords.iFillTheWaterTank();
+});
 
 When(/^I take "(.*)" coffees$/, async (coffee_number) => {
     actionWords.iTakeCoffeeNumberCoffees(coffee_number);

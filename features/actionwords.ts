@@ -1,4 +1,6 @@
 import { assert } from "chai";
+import { TableDefinition } from "cucumber";
+
 import { CoffeeMachine } from "../src/coffee_machine";
 
 export class ActionWords {
@@ -108,7 +110,9 @@ export class ActionWords {
         this.sut.showSettings();
     }
 
-    settingsShouldBe(__datatable = "||") {
-        assert.equal(__datatable, "coucou");
+    settingsShouldBe(__datatable: TableDefinition) {
+        __datatable.rows().forEach(row => {
+            assert.equal(row[1], this.sut.getSettings().get(row[0]));
+        });
     }
 }
