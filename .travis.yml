@@ -9,6 +9,7 @@ before_install:
   - rvm use 2.6.2
   - gem install hiptest-publisher
   - "hiptest-publisher -c cucumber-typescript.conf -t $SECRET_TOKEN --without=actionwords --test-run-id=258520"
+  - npm install -g typescript
   - npm install
 
 script:
