@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && cucumber-js features/",
-    "ci": "tsc && cucumber-js features/ --format=json"
+    "ci": "tsc && cucumber-js features/ --format=json:results.json"
   },
   "repository": {
     "type": "git",
