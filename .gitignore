@@ -1,4 +1,4 @@
 node_modules
 src/*.js
 features/*.js
-report.json
+results.json

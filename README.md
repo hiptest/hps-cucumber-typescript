@@ -40,4 +40,4 @@ To build the project and run the tests, use the following command:
     npm install
     npm run test
 
-The SUT implementation can be seen in [``src/coffee_machine.js!``](https://github.com/hiptest/hps-cucumber-typescript/blob/master/src/coffee_machine.js)
+The SUT implementation can be seen in [``src/coffee_machine.ts!``](https://github.com/hiptest/hps-cucumber-typescript/blob/master/src/coffee_machine.ts)

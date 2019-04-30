@@ -13,7 +13,7 @@ before_install:
   - npm install
 
 script:
-  - npm run ci > report.json
+  - npm run ci > results.json
 
 after_script:
   - hiptest-publisher -c cucumber-typescript.conf -t $SECRET_TOKEN --push=results.json --test-run-id=258520
