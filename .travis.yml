@@ -5,8 +5,8 @@ node_js:
 sudo: false
 
 before_install:
-  - rvm install 2.6
-  - rvm use 2.6
+  - rvm install 2.6.2
+  - rvm use 2.6.2
   - gem install hiptest-publisher
   - "hiptest-publisher -c cucumber-js.conf --only=features,step_definitions --test-run-id=258520"
   - npm install
